@@ -1,9 +1,0 @@
-{
-    "version": 4,
-    "vendor": {
-        "conan": {}
-    },
-    "include": [
-        "/home/sivachandran/Workspace/personal/qct/conan-xml-security-c/all/test_package/build/gcc-11-x86_64-gnu17-release/generators/CMakePresets.json"
-    ]
-}

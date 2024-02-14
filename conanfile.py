@@ -1,6 +1,6 @@
 from conan import ConanFile
 from conan.errors import ConanInvalidConfiguration
-from conan.tools.files import copy, get, rm, rmdir, collect_libs
+from conan.tools.files import get, rm, rmdir, collect_libs
 from conan.tools.gnu import Autotools, AutotoolsToolchain, PkgConfigDeps
 from conan.tools.layout import basic_layout
 import os
@@ -52,6 +52,10 @@ class Libxmlsecurityc(ConanFile):
 
     def requirements(self):
         self.requires("xerces-c/3.2.5")
+        if self.options.with_openssl:
+            self.requires("openssl/3.2.1")
+        else:
+            self.requires("nss/3.93")
 
     def source(self):
         get(self, **self.conan_data["sources"][self.version], strip_root=True)

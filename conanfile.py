@@ -8,8 +8,8 @@ import os
 required_conan_version = ">=2.0.17"
 
 
-class Libxmlsecurityc(ConanFile):
-    name = "libxml-security-c"
+class XmlSecurityCConan(ConanFile):
+    name = "xml-security-c"
     url = "https://github.com/conan-io/conan-center-index"
     homepage = "https://santuario.apache.org/cindex.html"
     license = "Apache License 2.0"
